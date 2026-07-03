@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Fim</name>
+    <events>
+        <event-block sid="3012249320469498">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9249992569245621" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Menu_FimA</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6951741873600556" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3461508272181832">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="4238772630522848" type="Mouse">
+                    <param id="0" name="Object">Menu_Fim</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4838847827452998" type="Menu_FimA" />
+                <action id="-3" name="Create object" sid="6336817050179358" type="System">
+                    <param id="0" name="Object to create">Menu_FimA</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">490.811</param>
+                    <param id="3" name="Y">325.375</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3758342059318532">
+            <conditions>
+                <condition id="-22" name="Else" sid="3687683843684073" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6526149927763684" type="Menu_FimA" />
+            </actions>
+        </event-block>
+        <event-block sid="2781464406359146">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5201213467782717" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">NovoJogo_FimA</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5931217122823258" type="System">
+                    <param id="0" name="Layout">Niveis</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2568904411296187">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2648721689087057" type="Mouse">
+                    <param id="0" name="Object">NovoJogo_Fim</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5800838848462235" type="NovoJogo_FimA" />
+                <action id="-3" name="Create object" sid="6496479333762492" type="System">
+                    <param id="0" name="Object to create">NovoJogo_FimA</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">261.653</param>
+                    <param id="3" name="Y">325.131</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7683709695470516">
+            <conditions>
+                <condition id="-22" name="Else" sid="1323058336731985" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8036983904678433" type="NovoJogo_FimA" />
+            </actions>
+        </event-block>
+        <event-block sid="8726420922149843">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8289161251680136" type="Mouse">
+                    <param id="0" name="Object">Ranking_B</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8891043847502657" type="Ranking_A" />
+                <action id="-3" name="Create object" sid="6314261117995601" type="System">
+                    <param id="0" name="Object to create">Ranking_A</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">275</param>
+                    <param id="3" name="Y">282</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="59003011428614">
+            <conditions>
+                <condition id="-22" name="Else" sid="9610422491919443" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3748849150518948" type="Ranking_A" />
+            </actions>
+        </event-block>
+        <event-block collapsed="1" sid="4686814389116116">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5673887081901524" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8339968417816827" type="Pontuacao_Fim">
+                    <param id="0" name="Text">Pontuacao&amp;&quot; Pts&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="5682944831458253" type="Tempo_Fim">
+                    <param id="0" name="Text">Tempo_H&amp;&quot;:&quot;&amp;Tempo_M&amp;&quot;:&quot;&amp;Tempo_S</param>
+                </action>
+                <action id="0" name="Set text" sid="5509213632531741" type="Tempo_Fim">
+                    <param id="0" name="Text">TempoFinal</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5403871513039181">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1637977203325137" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6382744604216138" type="System">
+                            <param id="0" name="Object to create">Iniciante_Fim</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">450</param>
+                            <param id="3" name="Y">62</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5141197175228787">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7914224651791196" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7271258279029018" type="System">
+                            <param id="0" name="Object to create">Intermediario_Fim</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">460</param>
+                            <param id="3" name="Y">62</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5594333509648918">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4809718389590407" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5208896624522021" type="System">
+                            <param id="0" name="Object to create">Avancado_Fim</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">460</param>
+                            <param id="3" name="Y">62</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="632881416026793">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="633091594494797" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="8257377670553459" type="Speaker2">
+                            <param id="0" name="X">31.489</param>
+                            <param id="1" name="Y">325.01</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5946773777355994">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9129306588033817" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3935249080236993">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4260455815272199" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="9933199098847575" type="AJAX">
+                            <param id="0" name="Tag">&quot;GetScores&quot;</param>
+                            <param id="1" name="URL">&quot;http://srbohr.esy.es/getscoresini.php&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="395729239903587">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9889172710260581" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="3831830448117761" type="AJAX">
+                            <param id="0" name="Tag">&quot;GetScores&quot;</param>
+                            <param id="1" name="URL">&quot;http://srbohr.esy.es/getscoresint.php&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4586696655108115">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2422533997666548" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="6502541738913422" type="AJAX">
+                            <param id="0" name="Tag">&quot;GetScores&quot;</param>
+                            <param id="1" name="URL">&quot;http://srbohr.esy.es/getscoresava.php&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8139244941296713">
+            <conditions>
+                <condition id="0" name="On completed" sid="1226274066571849" type="AJAX">
+                    <param id="0" name="Tag">&quot;GetScores&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="3024669164657859" type="System">
+                    <param id="0" name="Group name">&quot;Preencher Array&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="3430625474506937" title="Preencher Array">
+            <sub-events>
+                <event-block sid="4236553116445459">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="3528969767566117" type="ArrayFim">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="5729585898282479" type="ArrayFim">
+                            <param id="0" name="X">ArrayFim.CurX</param>
+                            <param id="1" name="Value">tokenat(Ajax.LastData, ArrayFim.CurX, &quot;|&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3072606209454143">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6537174278009532" type="System">
+                            <param id="0" name="Variable">Pontuacao</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">ArrayFim.At(13)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8959910205794762" type="System">
+                            <param id="0" name="Object to create">Ranking_B</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">275</param>
+                            <param id="3" name="Y">282</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9008946605014923" type="System">
+                            <param id="0" name="Object to create">vcEntrouRanking</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">272</param>
+                            <param id="3" name="Y">258</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="8124716320220342" type="System">
+                            <param id="0" name="Group name">&quot;Post&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8569055191929371">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1706380103949017" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="5618033313701309" type="System">
+                            <param id="0" name="Group name">&quot;Post&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="39359553362542">
+                    <conditions />
+                    <actions>
+                        <action id="-12" name="Set group active" sid="9830630227046553" type="System">
+                            <param id="0" name="Group name">&quot;Preencher Array&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="8135100281661151" title="Post">
+            <sub-events>
+                <event-block sid="1144613382890789">
+                    <conditions />
+                    <actions>
+                        <action id="2" name="Post to URL" sid="2374657975049496" type="AJAX">
+                            <param id="0" name="Tag">&quot;PostScore&quot;</param>
+                            <param id="1" name="URL">&quot;http://srbohr.esy.es/savescores.php?nome=&quot; &amp; Jogador &amp; &quot;&amp;pontuacao=&quot; &amp; Pontuacao &amp; &quot;&amp;nivel= &quot; &amp; Nivel &amp; &quot;&amp;tempo= &quot; &amp;  Tempo_H&amp;&quot;:&quot;&amp;Tempo_M&amp;&quot;:&quot;&amp;Tempo_S</param>
+                            <param id="2" name="Data">&quot;&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="652684979619769" type="System">
+                            <param id="0" name="Group name">&quot;Post&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3431380738768368">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="114752774393749" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Ranking_A</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3660237717847428" type="System">
+                    <param id="0" name="Layout">Ranking</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5459653631830733">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3747367584641963" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5909691780550059" type="System">
+                    <param id="0" name="Variable">TempoMin</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="741055028754458" type="System">
+                    <param id="0" name="Variable">TempoSec</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="3341592909866674" type="System">
+                    <param id="0" name="Variable">TempoHr</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8719076857009811">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2079722375484188" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Speaker</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="1349880958753425" type="System">
+                    <param id="0" name="Group name">&quot;Desliga som&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1718783248443003">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="586306288978765" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Speaker2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="6174477830496698" type="System">
+                    <param id="0" name="Group name">&quot;Liga som&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" inactive="1" sid="704752753526447" title="Desliga som">
+            <sub-events>
+                <event-block sid="2816773301894353">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="4857933034848982" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="4186096101410915" type="Speaker">
+                            <param id="0" name="X">-83</param>
+                            <param id="1" name="Y">396</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="8693399121621688" type="Speaker2">
+                            <param id="0" name="X">31.489</param>
+                            <param id="1" name="Y">325.01</param>
+                        </action>
+                        <action id="6" name="Stop" sid="5019957474967608" type="Audio">
+                            <param id="0" name="Tag">&quot;fundo2&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="799413824659121" type="System">
+                            <param id="0" name="Group name">&quot;Desliga som&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="6675105300443477" title="Liga som">
+            <sub-events>
+                <event-block sid="5829925696347612">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="3873914769552879" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="9576220711861714" type="Speaker">
+                            <param id="0" name="X">35</param>
+                            <param id="1" name="Y">323</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="117632404953326" type="Speaker2">
+                            <param id="0" name="X">-83</param>
+                            <param id="1" name="Y">396</param>
+                        </action>
+                        <action id="0" name="Play" sid="1664686354795762" type="Audio">
+                            <param id="0" name="Audio file">som1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fundo&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7860329911878452" type="System">
+                            <param id="0" name="Group name">&quot;Liga som&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="7815539995974283">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="5294924730228767" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3060760703994249" type="Speaker2">
+                    <param id="0" name="X">-83</param>
+                    <param id="1" name="Y">396</param>
+                </action>
+                <action id="-3" name="Set position" sid="7698266865728129" type="Speaker">
+                    <param id="0" name="X">-83</param>
+                    <param id="1" name="Y">396</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

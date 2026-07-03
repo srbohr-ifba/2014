@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <event-block sid="3288162159164484">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="6583425818770288" type="Mouse">
+                    <param id="0" name="Object">Jogar_B</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8094045692814845" type="Jogar_A" />
+                <action id="-3" name="Create object" sid="8306041235215018" type="System">
+                    <param id="0" name="Object to create">Jogar_A</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">88</param>
+                    <param id="3" name="Y">125</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2983961188463898">
+            <conditions>
+                <condition id="-22" name="Else" sid="4030406434202749" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7574477396551054" type="Jogar_A" />
+            </actions>
+        </event-block>
+        <event-block sid="2314107181079781">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="2753460810747406" type="Mouse">
+                    <param id="0" name="Object">Regras_B</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1445844979471353" type="Regras_A" />
+                <action id="-3" name="Create object" sid="1763918454234933" type="System">
+                    <param id="0" name="Object to create">Regras_A</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">99</param>
+                    <param id="3" name="Y">157</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8199544835285776">
+            <conditions>
+                <condition id="-22" name="Else" sid="3361586706288324" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5346529923309732" type="Regras_A" />
+            </actions>
+        </event-block>
+        <event-block sid="2718429057014509">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="6174371116997473" type="Mouse">
+                    <param id="0" name="Object">Ranking_B</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3981782330948452" type="Ranking_A" />
+                <action id="-3" name="Create object" sid="2887548051198955" type="System">
+                    <param id="0" name="Object to create">Ranking_A</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">99</param>
+                    <param id="3" name="Y">189</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="97954683640255">
+            <conditions>
+                <condition id="-22" name="Else" sid="8423440138102503" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5745389515555364" type="Ranking_A" />
+            </actions>
+        </event-block>
+        <event-block sid="453654820338211">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="9460285688334606" type="Mouse">
+                    <param id="0" name="Object">Creditos_B</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7331050729595041" type="Creditos_A" />
+                <action id="-3" name="Create object" sid="9651184454462254" type="System">
+                    <param id="0" name="Object to create">Creditos_A</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">110</param>
+                    <param id="3" name="Y">221</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7490289782944509">
+            <conditions>
+                <condition id="-22" name="Else" sid="4038366242054596" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2947482390810986" type="Creditos_A" />
+            </actions>
+        </event-block>
+        <event-block sid="819517771327587">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2033772539556106" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Jogar_A</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4416523569377375" type="System">
+                    <param id="0" name="Layout">Niveis</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3432080024838753">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9228208203199613" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Regras_A</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5456852951254183" type="System">
+                    <param id="0" name="Layout">Regras</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="311186347080458">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3091085916369257" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Ranking_A</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9458511820953761" type="System">
+                    <param id="0" name="Layout">Ranking</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9880946219562302">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4889584853855053" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Creditos_A</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9049849541172316" type="System">
+                    <param id="0" name="Layout">Creditos</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2033557741415682">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6327392276669424" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">SpeakerMenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="4972999823430981" type="System">
+                    <param id="0" name="Group name">&quot;Desliga som&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6473938501509251">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6444325351455173" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Speaker2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="2529166514081819" type="System">
+                    <param id="0" name="Group name">&quot;Liga som&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3765995811131677">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="659715766333954" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="764175559476957">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4287284615231951" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Fundo1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1421489402491544" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="7519287873812794" type="Audio">
+                            <param id="0" name="Audio file">som1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fundo&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="6311680418951612" type="Audio">
+                            <param id="0" name="Tag">&quot;fundo2&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4347064245646028" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Fundo1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1976748581835568">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3376483646353197" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="2000578468475534" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Fundo2</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="3477816489798392" type="Audio">
+                            <param id="0" name="Tag">&quot;fundo2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" inactive="1" sid="5870274299432917" title="Desliga som">
+            <sub-events>
+                <event-block sid="2816773301894353">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="1012408053264118" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="4186096101410915" type="SpeakerMenu">
+                            <param id="0" name="X">-83</param>
+                            <param id="1" name="Y">396</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="8693399121621688" type="Speaker2">
+                            <param id="0" name="X">13.658</param>
+                            <param id="1" name="Y">381.433</param>
+                        </action>
+                        <action id="6" name="Stop" sid="5019957474967608" type="Audio">
+                            <param id="0" name="Tag">&quot;fundo&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="799413824659121" type="System">
+                            <param id="0" name="Group name">&quot;Desliga som&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="7660561328566048" title="Liga som">
+            <sub-events>
+                <event-block sid="5829925696347612">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="611167610321514" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="9576220711861714" type="SpeakerMenu">
+                            <param id="0" name="X">17.516</param>
+                            <param id="1" name="Y">379.392</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="117632404953326" type="Speaker2">
+                            <param id="0" name="X">-83</param>
+                            <param id="1" name="Y">396</param>
+                        </action>
+                        <action id="0" name="Play" sid="1664686354795762" type="Audio">
+                            <param id="0" name="Audio file">som1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fundo&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7860329911878452" type="System">
+                            <param id="0" name="Group name">&quot;Liga som&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="4174136277678303">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="1864377717141555" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3150677862179405" type="Speaker2">
+                    <param id="0" name="X">-83</param>
+                    <param id="1" name="Y">396</param>
+                </action>
+                <action id="-3" name="Set position" sid="342922507793656" type="SpeakerMenu">
+                    <param id="0" name="X">-83</param>
+                    <param id="1" name="Y">396</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3704258977081918">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2753293440548145" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7809047513298876">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3619886803566476" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="9815599441181985" type="Speaker2">
+                            <param id="0" name="X">13.658</param>
+                            <param id="1" name="Y">381.433</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4796057996693585">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8323741140582777" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="4931370892384854" type="SpeakerMenu">
+                            <param id="0" name="X">17.516</param>
+                            <param id="1" name="Y">379.392</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,918 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Niveis</name>
+    <events>
+        <variable constant="0" name="Tempo_H" sid="2105485303987339" static="0" type="number">0</variable>
+        <variable constant="0" name="Tempo_M" sid="4814840715409462" static="0" type="number">0</variable>
+        <variable constant="0" name="Tempo_S" sid="4461857617864262" static="0" type="number">0</variable>
+        <variable constant="0" name="TempoMin" sid="5491784485639807" static="0" type="number">0</variable>
+        <variable constant="0" name="TempoSec" sid="5535255911777309" static="0" type="number">0</variable>
+        <variable constant="0" name="TempoHr" sid="3930723633423002" static="0" type="number">0</variable>
+        <variable constant="0" name="Layouts" sid="9297888694464084" static="0" type="number">0</variable>
+        <variable constant="0" name="Pontuacao" sid="7013104148207625" static="0" type="number">0</variable>
+        <variable constant="0" name="Nivel" sid="4842334120459928" static="0" type="number">0</variable>
+        <variable constant="0" name="Jogador" sid="5168285835500491" static="0" type="text"></variable>
+        <event-block sid="2286522202577189">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9955412088955106" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Set focused" sid="8007677696197668" type="GetJogador" />
+                <action id="-9" name="Set value" sid="2806285446096451" type="System">
+                    <param id="0" name="Variable">Pontuacao</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="1917969197217119" type="System">
+                    <param id="0" name="Variable">Layouts</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="4523372188197225" type="XML">
+                    <param id="0" name="Instance variable">primeiraRodada</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="1608137211545847" type="XML">
+                    <param id="0" name="Instance variable">segundaRodada</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="782695391174385" type="XML">
+                    <param id="0" name="Instance variable">terceiraRodada</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="4290649482244114" type="System">
+                    <param id="0" name="Variable">TempoMin</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="2742816400523144" type="System">
+                    <param id="0" name="Variable">TempoSec</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8464776210533163" type="System">
+                    <param id="0" name="Variable">TempoHr</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="9490983337762749" type="GetJogador">
+                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                    <param id="1" name="Value">&quot;transparent&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="9989893599773026" type="GetJogador">
+                    <param id="0" name="Property name">&quot;border-color&quot;</param>
+                    <param id="1" name="Value">&quot;transparent&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="2403184662999851" type="GetJogador">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;yellow&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="2427428652580418" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="272275492984444" type="System">
+                    <param id="0" name="Variable">Tempo_H</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="2558916853883586" type="System">
+                    <param id="0" name="Variable">Tempo_M</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="2657946542761861" type="System">
+                    <param id="0" name="Variable">Tempo_S</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="7442767079309032" type="InformarNome">
+                    <param id="0" name="X">167.357</param>
+                    <param id="1" name="Y">144.895</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="Registra a quantidade de caracters de GetJogador numa variável de instância e, caso essa quantidade seja menor que 11 ele salva o nome na variável global jogador, se não elel não aceita mais nenhum caracter." sid="3733799422496454" title="GetJogador">
+            <sub-events>
+                <event-block sid="1194000218529521">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2667373896454275" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="363105373325746" type="GetJogador">
+                            <param id="0" name="Instance variable">QuantCaracters</param>
+                            <param id="1" name="Value">len(GetJogador.Text)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7463998450543393">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2576566588067766" type="GetJogador">
+                            <param id="0" name="Instance variable">QuantCaracters</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2691669869419137" type="System">
+                            <param id="0" name="Variable">Jogador</param>
+                            <param id="1" name="Value">GetJogador.Text</param>
+                        </action>
+                        <action id="0" name="Set text" sid="17527229457054" type="GetJogador">
+                            <param id="0" name="Text">GetJogador.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8968029708335054">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7274617100842005" type="GetJogador">
+                            <param id="0" name="Instance variable">QuantCaracters</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8587118926380171" type="GetJogador">
+                            <param id="0" name="Text">Jogador</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3102618897968438">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9601101599423404" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Iniciante</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5091663254984999" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7400323337654463" type="System">
+                    <param id="0" name="Layout">Principal</param>
+                </action>
+                <action id="-9" name="Set value" sid="2350875042135538" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="2023240464120344" type="Audio">
+                    <param id="0" name="Audio file">Selecao</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8226506934289322">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1717104038160896" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Avancado</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2841801512630757" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="341858521038561" type="System">
+                    <param id="0" name="Layout">Principal</param>
+                </action>
+                <action id="-9" name="Set value" sid="7484838531668561" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="0" name="Play" sid="7165242117125584" type="Audio">
+                    <param id="0" name="Audio file">Selecao</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5709903393475326">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5714945785130708" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Intermediario</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5060891323021304" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3833647390130582" type="System">
+                    <param id="0" name="Layout">Principal</param>
+                </action>
+                <action id="-9" name="Set value" sid="7833812935506617" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Play" sid="4961296728710489" type="Audio">
+                    <param id="0" name="Audio file">Selecao</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="1370834216500163">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7512012414956185" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Iniciante</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="6614147985441795" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Intermediario</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="7190297646637447" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Avancado</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3999277698165788">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3932539048211407" type="System">
+                            <param id="0" name="Variable">Jogador</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="3779726730049847" type="System">
+                            <param id="0" name="Object to create">InformarNome</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">169</param>
+                            <param id="3" name="Y">145</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="5552540742382314" type="InformarNome">
+                            <param id="0" name="X">-117</param>
+                            <param id="1" name="Y">205</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5253375167203795" type="InformarNome2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4322450483198906">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5209444424823105" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Voltar_Niveis</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3103786428586674" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4649344269385364">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="9891121355325192" type="Mouse">
+                    <param id="0" name="Object">Iniciante</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3427701345081539" type="Marc_4" />
+                <action id="-3" name="Create object" sid="4333044860303436" type="System">
+                    <param id="0" name="Object to create">Marc_4</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">142</param>
+                    <param id="3" name="Y">219</param>
+                </action>
+                <action id="-9" name="Set value" sid="4636938575558366" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2975929981445424" type="Marc_5" />
+                <action id="-9" name="Destroy" sid="2235069504962557" type="Marc_6" />
+            </actions>
+        </event-block>
+        <event-block sid="4245805746535838">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5771349147110459" type="Mouse">
+                    <param id="0" name="Object">Intermediario</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4178544425893699" type="Marc_5" />
+                <action id="-3" name="Create object" sid="2929334344557192" type="System">
+                    <param id="0" name="Object to create">Marc_5</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">142</param>
+                    <param id="3" name="Y">258</param>
+                </action>
+                <action id="-9" name="Set value" sid="7383109002727943" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6512750874861341" type="Marc_4" />
+                <action id="-9" name="Destroy" sid="9236934802578943" type="Marc_6" />
+            </actions>
+        </event-block>
+        <event-block sid="4735918838555545">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="3394033217520419" type="Mouse">
+                    <param id="0" name="Object">Avancado</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="45136880378312" type="Marc_6" />
+                <action id="-3" name="Create object" sid="1591730808989038" type="System">
+                    <param id="0" name="Object to create">Marc_6</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">142</param>
+                    <param id="3" name="Y">297</param>
+                </action>
+                <action id="-9" name="Set value" sid="5635525704246944" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3423202168645263" type="Marc_4" />
+                <action id="-9" name="Destroy" sid="4711997497768852" type="Marc_5" />
+            </actions>
+        </event-block>
+        <event-block sid="8636422773925572">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3030967084005698" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2351817245435422" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8902167139574414" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="9974832127632854" type="System">
+                    <param id="0" name="Group name">&quot;EscolherNivel&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="2981128457285979" type="System">
+                    <param id="0" name="Group name">&quot;Ativar som Key&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" inactive="1" sid="1636951153813029" title="EscolherNivel">
+            <sub-events>
+                <event-block sid="6139008970636578">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5116602560996853" type="Marc_4" />
+                        <action id="-3" name="Create object" sid="4126674215666473" type="System">
+                            <param id="0" name="Object to create">Marc_4</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">142</param>
+                            <param id="3" name="Y">219</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9095606943803482" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="8" name="Set unfocused" sid="9643332840158001" type="GetJogador" />
+                        <action id="-12" name="Set group active" sid="7976358474135415" type="System">
+                            <param id="0" name="Group name">&quot;EscolherNivel&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3194757065536107">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="183416272020158" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2866298208783203" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2310888177708854" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5154643263911291" type="System">
+                    <param id="0" name="Layout">Principal</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" inactive="1" sid="7482627488160994" title="Down1">
+            <sub-events>
+                <event-block sid="6188782019457175">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="3597933810839326" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="921133263730108" type="Marc_4" />
+                        <action id="-9" name="Destroy" sid="819073976245648" type="Marc_5" />
+                        <action id="-3" name="Create object" sid="9231103138457" type="System">
+                            <param id="0" name="Object to create">Marc_5</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">142</param>
+                            <param id="3" name="Y">258</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5730726599013995" type="System">
+                            <param id="0" name="Group name">&quot;Down1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="5953891034543212" title="Down2">
+            <sub-events>
+                <event-block sid="6390555604455055">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="4109122307073615" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7544141738606817" type="Marc_5" />
+                        <action id="-9" name="Destroy" sid="3777212819347173" type="Marc_6" />
+                        <action id="-3" name="Create object" sid="1379072153660906" type="System">
+                            <param id="0" name="Object to create">Marc_6</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">142</param>
+                            <param id="3" name="Y">297</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="9746120728524429" type="System">
+                            <param id="0" name="Group name">&quot;Down2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="8004807233863641" title="Down3">
+            <sub-events>
+                <event-block sid="3191090099721902">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="9263482173809393" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7686848163358614" type="Marc_6" />
+                        <action id="-9" name="Destroy" sid="6825761592272729" type="Marc_4" />
+                        <action id="-3" name="Create object" sid="8966442916559313" type="System">
+                            <param id="0" name="Object to create">Marc_4</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">142</param>
+                            <param id="3" name="Y">219</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="2281698145036846" type="System">
+                            <param id="0" name="Group name">&quot;Down3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="3029583201619345" title="Up1">
+            <sub-events>
+                <event-block sid="7386418044793107">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="1394151903665973" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8077081765234307" type="Marc_6" />
+                        <action id="-3" name="Create object" sid="1700805908205535" type="System">
+                            <param id="0" name="Object to create">Marc_6</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">142</param>
+                            <param id="3" name="Y">297</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2836632693566622" type="Marc_4" />
+                        <action id="-12" name="Set group active" sid="8940628994995564" type="System">
+                            <param id="0" name="Group name">&quot;Up1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="8967949621735687" title="Up2">
+            <sub-events>
+                <event-block sid="1637955777298129">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="3551440668891741" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4270521713332717" type="Marc_4" />
+                        <action id="-3" name="Create object" sid="6631239973937856" type="System">
+                            <param id="0" name="Object to create">Marc_4</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">142</param>
+                            <param id="3" name="Y">219</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1878357702540223" type="Marc_5" />
+                        <action id="-12" name="Set group active" sid="9772365711231851" type="System">
+                            <param id="0" name="Group name">&quot;Up2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="8858124043687367" title="Up3">
+            <sub-events>
+                <event-block sid="8573332132456376">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="6471139162232415" type="System">
+                            <param id="0" name="Variable">Nivel</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2816704851442515" type="Marc_5" />
+                        <action id="-3" name="Create object" sid="9004660123550274" type="System">
+                            <param id="0" name="Object to create">Marc_5</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">142</param>
+                            <param id="3" name="Y">258</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9099083573201123" type="Marc_6" />
+                        <action id="-12" name="Set group active" sid="1105258073768182" type="System">
+                            <param id="0" name="Group name">&quot;Up3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="2058674822010935">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8610394080580855" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5527744084843827" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3406008625429595" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="3685654508533046" type="System">
+                    <param id="0" name="Group name">&quot;Up1&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Play" sid="1072080558025176" type="Audio">
+                    <param id="0" name="Audio file">Selecao</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4717124400857991">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6975332786223942" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5641048621241708" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9470805017422036" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="9129247510630001" type="System">
+                    <param id="0" name="Group name">&quot;Up2&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Play" sid="1383176074904242" type="Audio">
+                    <param id="0" name="Audio file">Selecao</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5826039680035979">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5349011116239578" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8457756455028069" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8397665522331511" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="7031331707672602" type="System">
+                    <param id="0" name="Group name">&quot;Up3&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Play" sid="718824907407854" type="Audio">
+                    <param id="0" name="Audio file">Selecao</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8208956328198424">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4390765161776309" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2176946233497893" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5326827044962754" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="3763746263623759" type="System">
+                    <param id="0" name="Group name">&quot;Down1&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Play" sid="8428281732712951" type="Audio">
+                    <param id="0" name="Audio file">Selecao</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7682056826098424">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2554059506503695" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9143439721337027" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3522106199992733" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="3385807959674253" type="System">
+                    <param id="0" name="Group name">&quot;Down2&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Play" sid="2746503423356143" type="Audio">
+                    <param id="0" name="Audio file">Selecao</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1739365635331135">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6457391102315298" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8870821636287777" type="System">
+                    <param id="0" name="Variable">Jogador</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6215012721855584" type="System">
+                    <param id="0" name="Variable">Nivel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="1851023010666984" type="System">
+                    <param id="0" name="Group name">&quot;Down3&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="0" name="Play" sid="2003125298330293" type="Audio">
+                    <param id="0" name="Audio file">Selecao</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8714298897372174">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6238213251874921" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Speaker</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="7190111332355204" type="System">
+                    <param id="0" name="Group name">&quot;Desliga som&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6131090991404027">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7461677571375151" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Speaker2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="8840864392028597" type="System">
+                    <param id="0" name="Group name">&quot;Liga som&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" inactive="1" sid="5588289818718246" title="Desliga som">
+            <sub-events>
+                <event-block sid="2816773301894353">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="4857933034848982" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="4186096101410915" type="Speaker">
+                            <param id="0" name="X">-83</param>
+                            <param id="1" name="Y">396</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="8693399121621688" type="Speaker2">
+                            <param id="0" name="X">32.489</param>
+                            <param id="1" name="Y">320.01</param>
+                        </action>
+                        <action id="6" name="Stop" sid="5019957474967608" type="Audio">
+                            <param id="0" name="Tag">&quot;fundo&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="799413824659121" type="System">
+                            <param id="0" name="Group name">&quot;Desliga som&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="5339994268744785" title="Liga som">
+            <sub-events>
+                <event-block sid="5829925696347612">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="3873914769552879" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="9576220711861714" type="Speaker">
+                            <param id="0" name="X">36</param>
+                            <param id="1" name="Y">318</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="117632404953326" type="Speaker2">
+                            <param id="0" name="X">-83</param>
+                            <param id="1" name="Y">396</param>
+                        </action>
+                        <action id="0" name="Play" sid="1664686354795762" type="Audio">
+                            <param id="0" name="Audio file">som1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fundo&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7860329911878452" type="System">
+                            <param id="0" name="Group name">&quot;Liga som&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3580188538439616">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3314864849708327" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="295443678929807" type="SpeakerMenu">
+                    <param id="0" name="Instance variable">Fundo2</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6218179510315234">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6953239604881087" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Fundo1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="719619369730546" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="2178149331378019" type="Audio">
+                            <param id="0" name="Audio file">som1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;fundo&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="6808641415645516" type="Audio">
+                            <param id="0" name="Tag">&quot;fundo2&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="3456841304235747" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Fundo1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="868550597481112">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7210352533741292" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="1084102020630858" type="Audio">
+                            <param id="0" name="Tag">&quot;fundo2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1802075711233944">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="570881025050358" type="SpeakerMenu">
+                            <param id="0" name="Instance variable">Som</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="8830481609705568" type="Speaker2">
+                            <param id="0" name="X">32.489</param>
+                            <param id="1" name="Y">320.01</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2022916739612536" type="Speaker">
+                            <param id="0" name="X">-83</param>
+                            <param id="1" name="Y">396</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group collapsed="1" description="" sid="3066290687506765" title="Ativar som Key">
+            <sub-events>
+                <event-block sid="1486158309408285">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="6954604370845512" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1624412780872596" type="Audio">
+                            <param id="0" name="Audio file">key</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
