@@ -1,0 +1,675 @@
+{
+  "generatedAt": "2026-07-13T03:03:35.096Z",
+  "totalThemes": 10,
+  "themes": [
+    {
+      "id": 1,
+      "title": "Amplamente usado na confecção de joias",
+      "answer": "Ouro",
+      "acceptedAnswers": [
+        "Ouro"
+      ],
+      "clueCount": 4,
+      "clues": [
+        {
+          "id": "1-1",
+          "clue": "Metal que se liga a outros formando amálgamas",
+          "answer": "mercúrio",
+          "alternatives": [
+            "mercúrio",
+            "mercurio"
+          ],
+          "highlightLetter": "u"
+        },
+        {
+          "id": "1-2",
+          "clue": "Separação de substâncias com diferentes pontos de ebulição",
+          "answer": "destilação",
+          "alternatives": [
+            "destilação",
+            "destilacao"
+          ],
+          "highlightLetter": "o"
+        },
+        {
+          "id": "1-3",
+          "clue": "Conhecidos como elementos pouco reativos",
+          "answer": "nobres",
+          "alternatives": [
+            "nobres"
+          ],
+          "highlightLetter": "o"
+        },
+        {
+          "id": "1-4",
+          "clue": "Energia transferida entre corpos com temperaturas diferentes",
+          "answer": "Calor",
+          "alternatives": [
+            "Calor"
+          ],
+          "highlightLetter": "r"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Telefone móvel",
+      "answer": "Celular",
+      "acceptedAnswers": [
+        "Celular"
+      ],
+      "clueCount": 7,
+      "clues": [
+        {
+          "id": "2-1",
+          "clue": "Fonte de energia, recarregável, usada em aparelhos portáteis",
+          "answer": "bateria",
+          "alternatives": [
+            "bateria"
+          ],
+          "highlightLetter": "e"
+        },
+        {
+          "id": "2-2",
+          "clue": "Metal de menor densidade",
+          "answer": "Lítio",
+          "alternatives": [
+            "Lítio",
+            "Litio"
+          ],
+          "highlightLetter": "l"
+        },
+        {
+          "id": "2-3",
+          "clue": "Denominação dos metais do grupo 1 da tabela",
+          "answer": "Alcalinos",
+          "alternatives": [
+            "Alcalinos"
+          ],
+          "highlightLetter": "c"
+        },
+        {
+          "id": "2-4",
+          "clue": "Polo negativo de uma pilha ou bateria",
+          "answer": "Ânodo",
+          "alternatives": [
+            "Ânodo",
+            "Anodo"
+          ],
+          "highlightLetter": "a"
+        },
+        {
+          "id": "2-5",
+          "clue": "Propriedade relacionada à capacidade de conduzir corrente elétrica",
+          "answer": "Condutividade",
+          "alternatives": [
+            "Condutividade"
+          ],
+          "highlightLetter": "u"
+        },
+        {
+          "id": "2-6",
+          "clue": "Unidade de medida da tensão Sistema Internacional",
+          "answer": "Volt",
+          "alternatives": [
+            "Volt"
+          ],
+          "highlightLetter": "l"
+        },
+        {
+          "id": "2-7",
+          "clue": "Produto da reação de um metal do grupo 1A com água",
+          "answer": "hidróxido",
+          "alternatives": [
+            "hidróxido",
+            "hidroxido"
+          ],
+          "highlightLetter": "r"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Usado para adoçar",
+      "answer": "Açúcar",
+      "acceptedAnswers": [
+        "Açúcar",
+        "Acucar"
+      ],
+      "clueCount": 6,
+      "clues": [
+        {
+          "id": "3-1",
+          "clue": "Dissacarídeo obtido da cana",
+          "answer": "sacarose",
+          "alternatives": [
+            "sacarose"
+          ],
+          "highlightLetter": "a"
+        },
+        {
+          "id": "3-2",
+          "clue": "Produto da hidrólise da sacarose",
+          "answer": "glicose",
+          "alternatives": [
+            "glicose"
+          ],
+          "highlightLetter": "c"
+        },
+        {
+          "id": "3-3",
+          "clue": "Usada no tratamento da diabetes",
+          "answer": "insulina",
+          "alternatives": [
+            "insulina"
+          ],
+          "highlightLetter": "u"
+        },
+        {
+          "id": "3-4",
+          "clue": "Dissacarídeo presente no leite",
+          "answer": "lactose",
+          "alternatives": [
+            "lactose"
+          ],
+          "highlightLetter": "c"
+        },
+        {
+          "id": "3-5",
+          "clue": "Grupo funcional presente na frutose",
+          "answer": "cetona",
+          "alternatives": [
+            "cetona"
+          ],
+          "highlightLetter": "a"
+        },
+        {
+          "id": "3-6",
+          "clue": "Isômero da glicose",
+          "answer": "frutose",
+          "alternatives": [
+            "frutose"
+          ],
+          "highlightLetter": "r"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Nome popular da aguardente da cana",
+      "answer": "Pinga",
+      "acceptedAnswers": [
+        "Pinga"
+      ],
+      "clueCount": 5,
+      "clues": [
+        {
+          "id": "4-1",
+          "clue": "Método de separação baseado na diferença do ponto de ebulição",
+          "answer": "Destilação",
+          "alternatives": [
+            "Destilação",
+            "Destilacao"
+          ],
+          "highlightLetter": "i"
+        },
+        {
+          "id": "4-2",
+          "clue": "Reação na qual açúcar é transformado em álcool",
+          "answer": "Fermentação",
+          "alternatives": [
+            "Fermentação",
+            "Fermentacao"
+          ],
+          "highlightLetter": "n"
+        },
+        {
+          "id": "4-3",
+          "clue": "Nome do monoálcool contendo dois carbonos",
+          "answer": "etanol",
+          "alternatives": [
+            "etanol"
+          ],
+          "highlightLetter": "a"
+        },
+        {
+          "id": "4-4",
+          "clue": "Órgão comprometido pelo consumo excessivo de álcool",
+          "answer": "fígado",
+          "alternatives": [
+            "fígado",
+            "figado"
+          ],
+          "highlightLetter": "g"
+        },
+        {
+          "id": "4-5",
+          "clue": "Tipo mais comum de cirrose",
+          "answer": "hepática",
+          "alternatives": [
+            "hepática",
+            "hepatica"
+          ],
+          "highlightLetter": "p"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Usado para revestir peças automotivas",
+      "answer": "Crômio",
+      "acceptedAnswers": [
+        "Crômio",
+        "Cromio"
+      ],
+      "clueCount": 6,
+      "clues": [
+        {
+          "id": "5-1",
+          "clue": "Processo de revestimento de um metal por outro",
+          "answer": "Galvanização",
+          "alternatives": [
+            "Galvanização",
+            "Galvanizacao"
+          ],
+          "highlightLetter": "o"
+        },
+        {
+          "id": "5-2",
+          "clue": "Deterioração de metais por um processo eletroquímico",
+          "answer": "Corrosão",
+          "alternatives": [
+            "Corrosão",
+            "Corrosao"
+          ],
+          "highlightLetter": "c"
+        },
+        {
+          "id": "5-3",
+          "clue": "Substância atraída por um campo magnético",
+          "answer": "Paramagnética",
+          "alternatives": [
+            "Paramagnética",
+            "Paramagnetica"
+          ],
+          "highlightLetter": "m"
+        },
+        {
+          "id": "5-4",
+          "clue": "Propriedade relacionada à resistência ao risco",
+          "answer": "Dureza",
+          "alternatives": [
+            "Dureza"
+          ],
+          "highlightLetter": "r"
+        },
+        {
+          "id": "5-5",
+          "clue": "Reação onde uma espécie recebe elétrons",
+          "answer": "Redução",
+          "alternatives": [
+            "Redução",
+            "Reducao"
+          ],
+          "highlightLetter": "o"
+        },
+        {
+          "id": "5-6",
+          "clue": "Eletrólise de sais fundidos",
+          "answer": "ígnea",
+          "alternatives": [
+            "ígnea",
+            "ignea"
+          ],
+          "highlightLetter": "i"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Bebida alcoólica obtida da uva",
+      "answer": "Vinho",
+      "acceptedAnswers": [
+        "Vinho"
+      ],
+      "clueCount": 5,
+      "clues": [
+        {
+          "id": "6-1",
+          "clue": "Processo usado para obtenção de energia por bactérias",
+          "answer": "fermentação",
+          "alternatives": [
+            "fermentação",
+            "fermentacao"
+          ],
+          "highlightLetter": "n"
+        },
+        {
+          "id": "6-2",
+          "clue": "Tipo de fermentação usado na produção de bebidas",
+          "answer": "alcoólica",
+          "alternatives": [
+            "alcoólica",
+            "alcoolica"
+          ],
+          "highlightLetter": "o"
+        },
+        {
+          "id": "6-3",
+          "clue": "Nome do álcool presente nas bebidas",
+          "answer": "etílico",
+          "alternatives": [
+            "etílico",
+            "etilico"
+          ],
+          "highlightLetter": "i"
+        },
+        {
+          "id": "6-4",
+          "clue": "Fungos usados na produção de cervejas",
+          "answer": "levedos",
+          "alternatives": [
+            "levedos"
+          ],
+          "highlightLetter": "v"
+        },
+        {
+          "id": "6-5",
+          "clue": "Grupo funcional característico dos alcoóis e fenóis",
+          "answer": "hidroxila",
+          "alternatives": [
+            "hidroxila"
+          ],
+          "highlightLetter": "h"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Aeronave flutuante impulsionada pelo vento",
+      "answer": "Balão",
+      "acceptedAnswers": [
+        "Balão",
+        "Balao"
+      ],
+      "clueCount": 5,
+      "clues": [
+        {
+          "id": "7-1",
+          "clue": "Propriedade que relaciona massa e volume",
+          "answer": "densidade",
+          "alternatives": [
+            "densidade"
+          ],
+          "highlightLetter": "a"
+        },
+        {
+          "id": "7-2",
+          "clue": "Gás nobre de menor densidade",
+          "answer": "hélio",
+          "alternatives": [
+            "hélio",
+            "helio"
+          ],
+          "highlightLetter": "o"
+        },
+        {
+          "id": "7-3",
+          "clue": "Ocorre quando um gás é aquecido sob pressão constante",
+          "answer": "expansão",
+          "alternatives": [
+            "expansão",
+            "expansao"
+          ],
+          "highlightLetter": "a"
+        },
+        {
+          "id": "7-4",
+          "clue": "Transformação gasosa sob pressão constante",
+          "answer": "isobárica",
+          "alternatives": [
+            "isobárica",
+            "isobarica"
+          ],
+          "highlightLetter": "b"
+        },
+        {
+          "id": "7-5",
+          "clue": "Aeronave mais leve que o ar que pode ser controlada",
+          "answer": "dirigível",
+          "alternatives": [
+            "dirigível",
+            "dirigivel"
+          ],
+          "highlightLetter": "l"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Constituinte das latas de refrigerante",
+      "answer": "Alumínio",
+      "acceptedAnswers": [
+        "Alumínio",
+        "Aluminio"
+      ],
+      "clueCount": 8,
+      "clues": [
+        {
+          "id": "8-1",
+          "clue": "Classificação dos elementos dos blocos “s” e “p”",
+          "answer": "Representativos",
+          "alternatives": [
+            "Representativos"
+          ],
+          "highlightLetter": "n"
+        },
+        {
+          "id": "8-2",
+          "clue": "Estado físico da maioria dos metais",
+          "answer": "Sólido",
+          "alternatives": [
+            "Sólido",
+            "Solido"
+          ],
+          "highlightLetter": "i"
+        },
+        {
+          "id": "8-3",
+          "clue": "Substância capaz de formar lâminas",
+          "answer": "maleável",
+          "alternatives": [
+            "maleável",
+            "maleavel"
+          ],
+          "highlightLetter": "l"
+        },
+        {
+          "id": "8-4",
+          "clue": "Bons condutores de eletricidade",
+          "answer": "metais",
+          "alternatives": [
+            "metais"
+          ],
+          "highlightLetter": "a"
+        },
+        {
+          "id": "8-5",
+          "clue": "Composto binário onde o oxigênio é o mais eletronegativo",
+          "answer": "óxido",
+          "alternatives": [
+            "óxido",
+            "oxido"
+          ],
+          "highlightLetter": "o"
+        },
+        {
+          "id": "8-6",
+          "clue": "Minério do qual se obtém a alumina",
+          "answer": "bauxita",
+          "alternatives": [
+            "bauxita"
+          ],
+          "highlightLetter": "u"
+        },
+        {
+          "id": "8-7",
+          "clue": "Eletrólise de compostos iônicos fundidos",
+          "answer": "ígnea",
+          "alternatives": [
+            "ígnea",
+            "ignea"
+          ],
+          "highlightLetter": "i"
+        },
+        {
+          "id": "8-8",
+          "clue": "Metal usado na extração de ouro",
+          "answer": "mercúrio",
+          "alternatives": [
+            "mercúrio",
+            "mercurio"
+          ],
+          "highlightLetter": "m"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Gás essencial à sobrevivência humana",
+      "answer": "Oxigênio",
+      "acceptedAnswers": [
+        "Oxigênio",
+        "Oxigenio"
+      ],
+      "clueCount": 8,
+      "clues": [
+        {
+          "id": "9-1",
+          "clue": "Substância formada por átomos de um mesmo elemento",
+          "answer": "simples",
+          "alternatives": [
+            "simples"
+          ],
+          "highlightLetter": "i"
+        },
+        {
+          "id": "9-2",
+          "clue": "Denominação das filas verticais da tabela periódica",
+          "answer": "famílias",
+          "alternatives": [
+            "famílias",
+            "familias"
+          ],
+          "highlightLetter": "i"
+        },
+        {
+          "id": "9-3",
+          "clue": "Nome do grupo 16 da tabela periódica",
+          "answer": "Calcogênios",
+          "alternatives": [
+            "Calcogênios",
+            "Calcogenios"
+          ],
+          "highlightLetter": "g"
+        },
+        {
+          "id": "9-4",
+          "clue": "Estado físico mais desorganizado da matéria",
+          "answer": "Gasoso",
+          "alternatives": [
+            "Gasoso"
+          ],
+          "highlightLetter": "o"
+        },
+        {
+          "id": "9-5",
+          "clue": "Capacidade de um mesmo elemento formar mais de uma substância simples",
+          "answer": "Alotropia",
+          "alternatives": [
+            "Alotropia"
+          ],
+          "highlightLetter": "o"
+        },
+        {
+          "id": "9-6",
+          "clue": "Ligação química formada a partir do compartilhamento de elétrons",
+          "answer": "covalente",
+          "alternatives": [
+            "covalente"
+          ],
+          "highlightLetter": "n"
+        },
+        {
+          "id": "9-7",
+          "clue": "Gás nobre localizado no quinto período da tabela periódica",
+          "answer": "xenônio",
+          "alternatives": [
+            "xenônio",
+            "xenonio"
+          ],
+          "highlightLetter": "x"
+        },
+        {
+          "id": "9-8",
+          "clue": "Substância que possui apenas ligações covalentes",
+          "answer": "molecular",
+          "alternatives": [
+            "molecular"
+          ],
+          "highlightLetter": "e"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Essencial para a vida no planeta",
+      "answer": "Água",
+      "acceptedAnswers": [
+        "Água",
+        "Agua"
+      ],
+      "clueCount": 4,
+      "clues": [
+        {
+          "id": "10-1",
+          "clue": "Substância formada por mais de um elemento",
+          "answer": "composta",
+          "alternatives": [
+            "composta"
+          ],
+          "highlightLetter": "a"
+        },
+        {
+          "id": "10-2",
+          "clue": "Molécula com momento de dipolo (µ ≠ 0)",
+          "answer": "Polar",
+          "alternatives": [
+            "Polar"
+          ],
+          "highlightLetter": "a"
+        },
+        {
+          "id": "10-3",
+          "clue": "Passagem do estado sólido para o líquido",
+          "answer": "fusão",
+          "alternatives": [
+            "fusão",
+            "fusao"
+          ],
+          "highlightLetter": "u"
+        },
+        {
+          "id": "10-4",
+          "clue": "Presente em todos os óxidos",
+          "answer": "oxigênio",
+          "alternatives": [
+            "oxigênio",
+            "oxigenio"
+          ],
+          "highlightLetter": "g"
+        }
+      ]
+    }
+  ]
+}
