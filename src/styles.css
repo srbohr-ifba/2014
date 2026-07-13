@@ -232,6 +232,7 @@ select:focus {
 
 .clue-list,
 .ranking-list,
+.ranking-group,
 .credit-columns,
 .logo-row {
   display: grid;
@@ -292,6 +293,14 @@ select:focus {
   margin: 0;
   color: var(--success);
   font-weight: 700;
+}
+
+.score-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .plain-list {

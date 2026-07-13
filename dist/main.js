@@ -1,8 +1,12 @@
-const STORAGE_KEY = "srbohr-ranking-v2";
+const STORAGE_KEY = "srbohr-ranking-v3";
+const MAX_RANKING_PER_LEVEL = 5;
+const ROUNDS_PER_SESSION = 4;
+const CLUE_POINTS = 35;
+const ENIGMA_BONUS = 220;
 const LEVELS = {
-  iniciante: { label: "Iniciante", rounds: 3, multiplier: 1, revealAllClues: true },
-  intermediario: { label: "Intermediário", rounds: 4, multiplier: 1.2, revealAllClues: true },
-  avancado: { label: "Avançado", rounds: 5, multiplier: 1.5, revealAllClues: true }
+  iniciante: { label: "Iniciante" },
+  intermediario: { label: "Intermediário" },
+  avancado: { label: "Avançado" }
 };
 
 const app = document.querySelector("#app");
@@ -100,6 +104,9 @@ function homeTemplate() {
             </label>
             <button class="button button--primary" type="submit">Começar</button>
           </form>
+          <p class="muted">
+            Os documentos descrevem 30 questões distribuídas em 3 níveis. O fonte legado disponível hoje preserva 10 temas em XML, sem a marcação explícita dessa classificação, então o acervo recuperado é compartilhado entre os níveis.
+          </p>
         </section>
 
         <section class="card">
@@ -113,9 +120,10 @@ function homeTemplate() {
         <section class="card">
           <h2>Como jogar</h2>
           <ul class="plain-list">
-            <li>Resolva as pistas secundárias para revelar letras do enigma principal.</li>
-            <li>Você pode tentar a resposta final a qualquer momento.</li>
-            <li>Pontos são concedidos por pista correta, acerto do enigma e bônus de dificuldade.</li>
+            <li>Cada rodada possui 4 enigmas, como descrito no artigo do WIE 2014.</li>
+            <li>Cada pista correta vale 35 pontos e o enigma completo vale 220 pontos.</li>
+            <li>A resposta do enigma só é liberada depois que todas as pistas forem resolvidas.</li>
+            <li>Se você já tentou todas as pistas, pode pular para o próximo enigma.</li>
           </ul>
         </section>
 
@@ -149,26 +157,39 @@ function homeTemplate() {
 }
 
 function rankingTemplate() {
-  if (!state.ranking.length) {
+  const groups = groupRankingByLevel();
+
+  if (!Object.values(groups).some((entries) => entries.length)) {
     return `<p class="muted">Nenhuma pontuação registrada ainda.</p>`;
   }
 
-  return `
-    <div class="ranking-list">
-      ${state.ranking
-        .map(
-          (entry, index) => `
-            <article class="ranking-entry">
-              <strong>#${index + 1} ${escapeHtml(entry.name)}</strong>
-              <span>${escapeHtml(LEVELS[entry.level]?.label || entry.level)}</span>
-              <span>${entry.score} pts</span>
-              <span>${entry.time}</span>
-            </article>
-          `
-        )
-        .join("")}
-    </div>
-  `;
+  return Object.entries(LEVELS)
+    .map(([levelKey, level]) => {
+      const entries = groups[levelKey];
+      return `
+        <section class="ranking-group">
+          <h3>${level.label}</h3>
+          ${
+            entries.length
+              ? `<div class="ranking-list">
+                  ${entries
+                    .map(
+                      (entry, index) => `
+                        <article class="ranking-entry">
+                          <strong>#${index + 1} ${escapeHtml(entry.name)}</strong>
+                          <span>${entry.score} pts</span>
+                          <span>${entry.time}</span>
+                        </article>
+                      `
+                    )
+                    .join("")}
+                </div>`
+              : `<p class="muted">Sem registros neste nível.</p>`
+          }
+        </section>
+      `;
+    })
+    .join("");
 }
 
 function gameTemplate() {
@@ -177,6 +198,8 @@ function gameTemplate() {
   const solvedLetters = round.clues
     .map((clue) => (clue.solved ? clue.highlightLetter : "_"))
     .join(" ");
+  const allCluesSolved = round.clues.every((clue) => clue.solved);
+  const allCluesAttempted = round.clues.every((clue) => clue.attempts > 0);
 
   return `
     <section class="panel">
@@ -187,7 +210,7 @@ function gameTemplate() {
         </div>
         <div>
           <p class="eyebrow">Nível</p>
-          <strong>${escapeHtml(LEVELS[state.session.level].label)}</strong>
+          <strong>${escapeHtml(LEVELS[state.session.level]?.label || state.session.level)}</strong>
         </div>
         <div>
           <p class="eyebrow">Pontuação</p>
@@ -204,7 +227,9 @@ function gameTemplate() {
           <p class="eyebrow">Enigma ${state.session.currentRound + 1} de ${totalRounds}</p>
           <h2>${escapeHtml(round.title)}</h2>
         </div>
-        <button class="button button--ghost" type="button" data-action="skip-round">Pular tema</button>
+        <button class="button button--ghost" type="button" data-action="skip-round" ${allCluesAttempted ? "" : "disabled"}>
+          Pular tema
+        </button>
       </div>
 
       <div class="game-grid">
@@ -245,10 +270,21 @@ function gameTemplate() {
           <form id="main-answer-form" class="stack">
             <label class="field">
               <span>Resposta do enigma</span>
-              <input id="main-answer" name="mainAnswer" type="text" autocomplete="off" placeholder="Digite sua resposta">
+              <input
+                id="main-answer"
+                name="mainAnswer"
+                type="text"
+                autocomplete="off"
+                placeholder="${allCluesSolved ? "Digite sua resposta" : "Resolva todas as pistas primeiro"}"
+                ${allCluesSolved ? "" : "disabled"}
+              >
             </label>
-            <button class="button button--primary" type="submit">Responder</button>
+            <button class="button button--primary" type="submit" ${allCluesSolved ? "" : "disabled"}>Responder</button>
           </form>
+          <div class="score-note">
+            <span>Pista correta: ${CLUE_POINTS} pts</span>
+            <span>Enigma completo: ${ENIGMA_BONUS} pts</span>
+          </div>
           ${round.feedback ? `<p class="feedback">${escapeHtml(round.feedback)}</p>` : ""}
         </section>
       </div>
@@ -353,14 +389,13 @@ function bindResultEvents() {
 }
 
 function startSession(playerName, level) {
-  const settings = LEVELS[level] || LEVELS.iniciante;
   const rounds = shuffle(state.data.themes)
-    .slice(0, Math.min(settings.rounds, state.data.themes.length))
+    .slice(0, Math.min(ROUNDS_PER_SESSION, state.data.themes.length))
     .map((theme) => ({
       ...theme,
       feedback: "",
       attempts: 0,
-      clues: theme.clues.map((clue) => ({ ...clue, solved: false }))
+      clues: theme.clues.map((clue) => ({ ...clue, solved: false, attempts: 0 }))
     }));
 
   state.session = {
@@ -385,9 +420,11 @@ function solveClue(clueId, rawAnswer) {
     return;
   }
 
+  clue.attempts += 1;
+
   if (matchesAny(rawAnswer, clue.alternatives)) {
     clue.solved = true;
-    state.session.score += Math.round(10 * LEVELS[state.session.level].multiplier);
+    state.session.score += CLUE_POINTS;
     round.feedback = `Pista resolvida: a letra ${clue.highlightLetter.toUpperCase()} foi revelada.`;
   } else {
     round.feedback = "Resposta incorreta para a pista. Tente novamente.";
@@ -398,19 +435,22 @@ function solveClue(clueId, rawAnswer) {
 
 function solveMainAnswer(rawAnswer) {
   const round = currentRound();
+
+  if (!round.clues.every((clue) => clue.solved)) {
+    round.feedback = "O enigma principal só é liberado após resolver todas as pistas.";
+    render();
+    return;
+  }
+
   round.attempts += 1;
 
   if (matchesAny(rawAnswer, round.acceptedAnswers)) {
-    const solvedCount = round.clues.filter((clue) => clue.solved).length;
-    const clueBonus = solvedCount * 5;
-    const answerBonus = Math.max(40 - (round.attempts - 1) * 5, 20);
-    state.session.score += Math.round((clueBonus + answerBonus) * LEVELS[state.session.level].multiplier);
+    state.session.score += ENIGMA_BONUS;
     round.feedback = `Enigma resolvido: ${round.answer}.`;
     advanceRound();
     return;
   }
 
-  state.session.score = Math.max(0, state.session.score - 5);
   round.feedback = "O enigma principal ainda não está correto.";
   render();
 }
@@ -435,9 +475,7 @@ function finishSession() {
     time: formatDuration(state.session.finishedAt - state.session.startedAt),
     createdAt: new Date().toISOString()
   };
-  state.ranking = [...state.ranking, entry]
-    .sort((left, right) => right.score - left.score || left.time.localeCompare(right.time))
-    .slice(0, 10);
+  state.ranking = trimRankingPerLevel([...state.ranking, entry]);
   persistRanking();
   render();
 }
@@ -468,6 +506,26 @@ function loadRanking() {
 function persistRanking() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state.ranking));
 }
+
+function groupRankingByLevel() {
+  return Object.keys(LEVELS).reduce((groups, levelKey) => {
+    groups[levelKey] = state.ranking
+      .filter((entry) => entry.level === levelKey)
+      .sort((left, right) => right.score - left.score || left.time.localeCompare(right.time))
+      .slice(0, MAX_RANKING_PER_LEVEL);
+    return groups;
+  }, {});
+}
+
+function trimRankingPerLevel(entries) {
+  return Object.entries(LEVELS).flatMap(([levelKey]) =>
+    entries
+      .filter((entry) => entry.level === levelKey)
+      .sort((left, right) => right.score - left.score || left.time.localeCompare(right.time))
+      .slice(0, MAX_RANKING_PER_LEVEL)
+  );
+}
+
 
 function matchesAny(value, acceptedAnswers) {
   const normalizedValue = normalizeAnswer(value);
