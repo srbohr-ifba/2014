@@ -17,3 +17,15 @@ Fluxo sugerido:
 1. Exporte o projeto no Construct 2 para HTML5.
 2. Salve os arquivos exportados em `export/` (ou outra das pastas suportadas).
 3. Faça o deploy no Coolify usando o `Dockerfile` da raiz do projeto.
+
+Exemplo de estrutura esperada:
+
+```text
+export/
+  index.html
+  c2runtime.js
+  data.js
+  jquery-2.1.1.min.js
+  images/ ou Images/
+  media/ ou Media/
+```
