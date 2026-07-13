@@ -24,6 +24,7 @@ boot();
 async function boot() {
   try {
     state.data = await fetch("./data/themes.json").then((response) => response.json());
+    state.screen = "ready";
     render();
     hydrateAudio();
   } catch (error) {
